@@ -6,14 +6,12 @@ Projeto/
 ├── docker
 │   └── docker-compose.yml
 ├── src/
-│   └── AgroSolutions.Analytics.Service
+│   └── AgroSolutions.Analytics
 │   │   └── dockerfile
-│   ├── AgroSolutions.Dashboard
+│   ├── AgroSolutions.Identity
 │   │   └── dockerfile
-│   ├── AgroSolutions.Identity.Service
+│   ├── AgroSolutions.Ingestion
 │   │   └── dockerfile
-│   ├── AgroSolutions.Ingestion.Service
-│   │   └── dockerfile
-│   ├── AgroSolutions.Properties.Service
+│   ├── AgroSolutions.Properties
 │   │   └── dockerfile
 ```
