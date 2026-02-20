@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Security.Claims;
 using System.Text;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -169,6 +170,7 @@ app.MapHealthChecks("/health");
 
 #endregion
 
+app.MapMetrics();
 app.Run();
 
 public partial class Program { }
