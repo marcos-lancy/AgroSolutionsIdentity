@@ -76,7 +76,7 @@ services:
     container_name: agrosolutions-grafana
     restart: always
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD: admin
@@ -95,7 +95,7 @@ services:
   # Identity Service
   identity-service:
     build:
-      context: ../src/AgroSolutions.Identity.Service
+      context: ../src/AgroSolutionsIdentity
       dockerfile: Dockerfile
     container_name: agrosolutions-identity-service
     restart: always
@@ -120,7 +120,7 @@ services:
   # Properties Service
   properties-service:
     build:
-      context: ../src/AgroSolutions.Properties.Service
+      context: ../src/AgroSolutionsProperties
       dockerfile: Dockerfile
     container_name: agrosolutions-properties-service
     restart: always
@@ -146,7 +146,7 @@ services:
   # Ingestion Service
   ingestion-service:
     build:
-      context: ../src/AgroSolutions.Ingestion.Service
+      context: ../src/AgroSolutionsIngestion
       dockerfile: Dockerfile
     container_name: agrosolutions-ingestion-service
     restart: always
@@ -177,7 +177,7 @@ services:
   # Analytics Service API
   analytics-service:
     build:
-      context: ../src/AgroSolutions.Analytics.Service
+      context: ../src/AgroSolutionAnalytics
       dockerfile: Dockerfile
     container_name: agrosolutions-analytics-service
     restart: always
@@ -206,7 +206,7 @@ services:
   # Analytics Service Worker
   analytics-worker:
     build:
-      context: ../src/AgroSolutions.Analytics.Service
+      context: ../src/AgroSolutionAnalytics
       dockerfile: Dockerfile.Worker
     container_name: agrosolutions-analytics-worker
     restart: always
@@ -226,6 +226,26 @@ services:
         condition: service_healthy
       analytics-service:
         condition: service_healthy
+  
+  # Dashboard - Frontend Web
+  dashboard:
+    build:
+      context: ../src/AgroSolutionsDashboard
+      dockerfile: Dockerfile
+    container_name: agrosolutions-dashboard
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - identity-service
+      - properties-service
+      - ingestion-service
+      - analytics-service
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 volumes:
   postgres_data:
