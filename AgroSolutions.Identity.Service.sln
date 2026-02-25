@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroSolutions.Identity.Service.Api", "src\AgroSolutions.Identity.Service.Api\AgroSolutions.Identity.Service.Api.csproj", "{A1B2C3D4-E5F6-4A5B-8C9D-0E1F2A3B4C5D}"
 EndProject
@@ -10,6 +9,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroSolutions.Identity.Service.Domain", "src\AgroSolutions.Identity.Service.Domain\AgroSolutions.Identity.Service.Domain.csproj", "{C3D4E5F6-A7B8-6C7D-0E1F-2A3B4C5D6E7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroSolutions.Identity.Service.Infra", "src\AgroSolutions.Identity.Service.Infra\AgroSolutions.Identity.Service.Infra.csproj", "{D4E5F6A7-B8C9-7D8E-1F2A-3B4C5D6E7F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroSolutions.Identity.Service.Tests", "src\AgroSolutions.Identity.Service.Tests\AgroSolutions.Identity.Service.Tests.csproj", "{BDF21CC5-807A-4EF6-8116-24AA91D1081B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,5 +34,15 @@ Global
 		{D4E5F6A7-B8C9-7D8E-1F2A-3B4C5D6E7F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E5F6A7-B8C9-7D8E-1F2A-3B4C5D6E7F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E5F6A7-B8C9-7D8E-1F2A-3B4C5D6E7F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF21CC5-807A-4EF6-8116-24AA91D1081B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF21CC5-807A-4EF6-8116-24AA91D1081B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF21CC5-807A-4EF6-8116-24AA91D1081B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF21CC5-807A-4EF6-8116-24AA91D1081B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E65911A-D4E1-42BE-AA1A-55AE292460C1}
 	EndGlobalSection
 EndGlobal
