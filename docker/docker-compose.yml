@@ -230,7 +230,7 @@ services:
   # Dashboard - Frontend Web
   dashboard:
     build:
-      context: ../src/AgroSolutionsDashboard
+      context: ../../AgroSolutionsDashboard
       dockerfile: Dockerfile
     container_name: agrosolutions-dashboard
     restart: always
